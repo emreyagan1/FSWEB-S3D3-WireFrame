@@ -1,26 +1,37 @@
-/* Sayfamızdaki bütün elemanların sınırlarını görebilmek için geçici bir çizgi ekleyebiliriz. Bunu proje sonunda silebilirsiniz. */
-* {
-  border: 1px solid purple;
-}
 
-/* css-1 sayfanın kenarındaki boşlukları body tag'i ile sıfırlayın ve minimum genişliğini 750px yapın */
+body {
+  margin:0;
+  padding:0;
+  min-width:750px;
+}
 
 .btn {
   padding: 10px 15px;
   cursor: pointer;
 }
 
-/* css-2 active isimli bir class için arkaplan'ı siyah yapın, yazılar beyaz olsun */
+.active {
+  background: black;
+  color: white;
+}
 
-/*. **** header **** */
 
-/* css-3 header içindeki 2 item'ı aralıkları eşit olacak şekilde sağa-sola yaslayalım */
+
 header {
+  display:flex;
+  justify-content: space-between;
   margin: 10px 20px;
 }
 
+h2 {
+  text-align: left;
+}
 /* css-4 headerdaki h2 için metni sola yaslayalım */
 
+nav {
+  display: flex;
+  align-items: center;
+}
 /* css-5 headerdaki navigasyon bölümü için flex kullanalım ve flex-item'ların dikeyde ortalayalım. */
 
 nav a {
@@ -30,6 +41,18 @@ nav a {
   color: white;
   text-decoration: none;
 }
+
+.banner-section {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 80%;
+  aspect-ratio: 4 / 3;
+  margin: 5% auto;
+  background: gray;
+}
+
 
 /* **** Banner **** */
 /* css-6 .banner-section içindeki item'ların yatay ve dikey'de ortalı olmasını sağlayalım.*/
@@ -47,6 +70,14 @@ nav a {
   yazılar ortalansın
 */
 .projects-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  text-align: center;
+}
+
+.projects-section {
   padding: 10px 20px;
 }
 
@@ -58,7 +89,15 @@ genişliği bulunduğu alanın tamamı olsun
 en/boy oranı 1/1 olsun
 arkaplanı gray olsun 
 */
+.projects-item {
+  width: 30%;
+}
 
+.projects-itemimg {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: gray;
+}
 /* **** footer **** */
 footer {
   width: 100%;
@@ -68,5 +107,11 @@ footer {
 
 /* css-13  footer'daki button block olsun*/
 footer button {
+  display:block;
   margin: 20px auto;
+}
+
+.banner-content button {
+  display: block;
+  margin: 0 auto;
 }
